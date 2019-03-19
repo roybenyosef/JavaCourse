@@ -20,13 +20,16 @@ public class Test {
         //without the class type we would need a downcast in the left side (getBean returns object)
         SingletonBean s2 =  context.getBean("singletonBean", SingletonBean.class);
 
-        PrototypeBean p1 = context.getBean(PrototypeBean.class);
-        PrototypeBean p2 = context.getBean(PrototypeBean.class);
+        PrototypeBean p1 = context.getBean("prototypeBean", PrototypeBean.class);
+        PrototypeBean p2 = context.getBean("prototypeBean", PrototypeBean.class);
+
+        PrototypeBean p3 = context.getBean("protoSix", PrototypeBean.class);
 
         System.out.println("single 1 X: " + s1.x);
         System.out.println("single 2 X: " + s2.x);
         System.out.println("Proto 1 X: " + p1.x);
         System.out.println("Proto 2 X: " + p2.x);
+        System.out.println("Proto 3 X: " + p3.x);
 
         //close - shutting down spring. it does a closure on all singletons (but not prototypes)
         //not all application contexts are try-with-resources, so we need the concrete type to call close()
