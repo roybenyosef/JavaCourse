@@ -20,9 +20,9 @@ public class StackConsumer implements Callable<Integer> {
             try {Thread.sleep(50);} catch (Exception e) { };
         }
 
-        System.out.println("Consumer sum: " + sum);
+        System.out.println(Thread.currentThread().getId() + " Consumer sum: " + sum);
         if (sum % 2 != 0) {
-            throw new Exception("From Consumer: Not Event");
+            throw new Exception(Thread.currentThread().getId() + " From Consumer: Not Event");
         }
         return sum;
     }
