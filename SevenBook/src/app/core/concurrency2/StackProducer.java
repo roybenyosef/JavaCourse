@@ -20,9 +20,9 @@ public class StackProducer implements Callable<Integer> {
             try {Thread.sleep(50);} catch (Exception e) { };
         }
 
-        System.out.println("Producer sum: " + sum);
+        System.out.println(Thread.currentThread().getId() + " Producer sum: " + sum);
         if (sum % 2 != 0) {
-            throw new Exception("From Producer: Not Event");
+            throw new Exception(Thread.currentThread().getId() + " From Producer: Not Event");
         }
         return sum;
     }

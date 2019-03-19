@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc49ba7-5161-4aea-abda-b195857ac196" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/core/concurrency2/Stack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/concurrency2/StackConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/concurrency2/StackProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/core/concurrency2/ThreadPoolExercise.java" afterDir="false" />
+    <list default="true" id="9fc49ba7-5161-4aea-abda-b195857ac196" name="Default Changelist" comment="Executor-Future exercise - working">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/concurrency2/StackConsumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/concurrency2/StackConsumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/concurrency2/StackProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/concurrency2/StackProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/core/concurrency2/ThreadPoolExercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/concurrency2/ThreadPoolExercise.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/StackProducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="22" selection-start-line="22" selection-end-line="23" />
+            <state>
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
                 <element signature="e#186#187#0" expanded="true" />
                 <element signature="e#220#221#0" expanded="true" />
@@ -33,12 +32,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/StackConsumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-              <folding>
-                <element signature="e#190#191#0" expanded="true" />
-                <element signature="e#224#225#0" expanded="true" />
-              </folding>
+            <state>
+              <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -46,7 +41,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/Stack.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state>
               <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -55,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/ThreadPoolExercise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="414">
+              <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -104,9 +99,9 @@
         <option value="$PROJECT_DIR$/src/app/core/concurrency/ConcurrentStack.java" />
         <option value="$PROJECT_DIR$/src/app/core/concurrency/ConcurrentStackProducer.java" />
         <option value="$PROJECT_DIR$/src/app/core/concurrency2/Stack.java" />
-        <option value="$PROJECT_DIR$/src/app/core/concurrency2/ThreadPoolExercise.java" />
-        <option value="$PROJECT_DIR$/src/app/core/concurrency2/StackProducer.java" />
         <option value="$PROJECT_DIR$/src/app/core/concurrency2/StackConsumer.java" />
+        <option value="$PROJECT_DIR$/src/app/core/concurrency2/StackProducer.java" />
+        <option value="$PROJECT_DIR$/src/app/core/concurrency2/ThreadPoolExercise.java" />
       </list>
     </option>
   </component>
@@ -127,7 +122,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -146,31 +140,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="core" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SevenBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SevenBook" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SevenBook" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SevenBook" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="core" type="462c0819:PsiDirectoryNode" />
-              <item name="concurrency2" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552381730509" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552572469420" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -251,10 +232,10 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.PrimitiesOut" />
-      <item itemvalue="Application.PrimitiesIn" />
-      <item itemvalue="Application.RunRunnable" />
       <item itemvalue="Application.ConcurrentStack" />
+      <item itemvalue="Application.PrimitiesIn" />
+      <item itemvalue="Application.PrimitiesOut" />
+      <item itemvalue="Application.RunRunnable" />
       <item itemvalue="Application.ThreadPoolExercise" />
     </list>
     <recent_temporary>
@@ -292,7 +273,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551283195140</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Executor-Future exercise - working">
+      <created>1552381980773</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1552381980773</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Executor-Future exercise - working">
+      <created>1552382065419</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1552382065419</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView">
@@ -307,7 +302,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23298033" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2375189" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -316,14 +311,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26360545" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.09555556" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.44047618" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32993197" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.15646258" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.3282313" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.20918368" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3282313" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -338,7 +333,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Print File" />
     <MESSAGE value="Update Java Course Day 2 EOD" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Java Course Day 2 EOD" />
+    <MESSAGE value="Executor-Future exercise - working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Executor-Future exercise - working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -455,16 +451,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/Stack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_201/src.zip!/java/util/concurrent/ExecutorService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
@@ -472,34 +458,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/StackConsumer.java">
+    <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/StackProducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        <state>
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#224#225#0" expanded="true" />
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/ThreadPoolExercise.java">
+    <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/StackConsumer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state>
+          <caret line="22" column="62" selection-start-line="22" selection-start-column="62" selection-end-line="22" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/Stack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/StackProducer.java">
+    <entry file="file://$PROJECT_DIR$/src/app/core/concurrency2/ThreadPoolExercise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="22" selection-start-line="22" selection-end-line="23" />
+        <state relative-caret-position="414">
+          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
           <folding>
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#220#221#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
