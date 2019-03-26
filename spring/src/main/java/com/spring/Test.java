@@ -4,10 +4,11 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
 
 @Configuration
 @ComponentScan("com")
+@EnableAspectJAutoProxy
 public class Test {
 
     //main doesn't have to be in the @Configration class at all. it's here incidentally
@@ -34,6 +35,11 @@ public class Test {
         System.out.println(p.getName());
         p.setName("Dudu");
         System.out.println(p.toString());
+
+        p1.getX();
+        p1.setX(42);
+        s1.getX();
+        s1.setX(42);
 
         //close - shutting down spring. it does a closure on all singletons (but not prototypes)
         //not all application contexts are try-with-resources, so we need the concrete type to call close()
