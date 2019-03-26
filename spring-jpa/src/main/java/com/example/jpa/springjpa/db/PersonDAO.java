@@ -22,4 +22,11 @@ public class PersonDAO {
     public Person getPerson(long id) {
         return entityManager.find(Person.class, id);
     }
+
+    @Transactional
+    public long addForum(Forum forum)
+    {
+        entityManager.persist(forum);
+        return forum.getId();
+    }
 }
