@@ -8,19 +8,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@RequestMapping("/api")
 public class MyController {
 
-    @GetMapping("sum/{num1}/{num2}")
+    @GetMapping("/sum/{num1}/{num2}")
     public int sum(@PathVariable("num1") int x, @PathVariable("num2") int y) {
         return x + y;
     }
 
-    @GetMapping("greet")
+    @GetMapping("/greet")
     public String greet(@RequestParam(value="user", defaultValue = "NoName") String name){
         return "Hello " + name;
     }
 
-    @GetMapping("getAll")
+    @GetMapping("/persons")
     public List<Person> getAll() {
         List<Person> list = new ArrayList<>();
         list.add(Person.builder().id(1).age(10).name("yoyoma").build());
@@ -39,7 +40,7 @@ public class MyController {
         return ResponseEntity.ok(p);
     }
 
-    @PostMapping
+    @PostMapping("/persons")
     public ResponseEntity<Person> add(@RequestBody Person p) {
         if (p.getAge() < 0 || p.getAge() > 120) {
             return ResponseEntity.badRequest().build();
