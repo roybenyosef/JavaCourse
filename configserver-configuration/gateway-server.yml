@@ -1,0 +1,15 @@
+server:
+  port: 8080
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 10
+  client:
+    registry-fetch-interval-seconds: 10
+    serviceUrl:
+      defaultZone: http://localhost:2000/eureka
+management:
+  endpoints:
+     web:
+       exposure:
+          include: hytrix.stream
