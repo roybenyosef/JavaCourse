@@ -19,6 +19,7 @@ public class UserController {
     @Autowired
     private RestTemplate restTemplate;
 
+    @HystrixCommand()
     @GetMapping("/userservice")
     public String userService() {
 
