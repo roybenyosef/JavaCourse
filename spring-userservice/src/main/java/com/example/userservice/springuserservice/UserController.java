@@ -22,7 +22,7 @@ public class UserController {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
             String jsonServerInfo = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(nextServerInfo);
-            return "User Service | Using payment service: " + jsonServerInfo;
+            return "User Service | Using payment service: <BR/>" + jsonServerInfo.replace("\r\n", "<BR/>").replace(" ", "&nbsp&nbsp&nbsp&nbsp");
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
